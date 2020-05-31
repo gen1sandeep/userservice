@@ -22,7 +22,7 @@ public class User {
     private String firstName;
 
 
-    @Size(min=30, max = 50, message = "Invalid last name")
+    @Size(min=3, max = 50, message = "Invalid last name")
     private String lastName;
 
     @Email(message = "Invalid e-Mail id")
