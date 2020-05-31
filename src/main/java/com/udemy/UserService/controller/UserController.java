@@ -10,6 +10,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 public class UserController {
     @Autowired
     private UserService service;
@@ -28,8 +29,8 @@ public class UserController {
     }
 
     @GetMapping("/api/users")
-    public List<User> getUsers(@RequestParam String userName){
-        return service.getUsers(userName);
+        public List<User> getUsers(){
+        return service.getUsers("");
     }
 
     @DeleteMapping("/api/users/{userId}")
